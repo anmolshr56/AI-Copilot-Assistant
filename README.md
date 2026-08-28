@@ -25,6 +25,7 @@ An AI-powered personal copilot designed to bring conversational AI, intelligent 
 AI-Copilot-Assistant/
 │
 ├── backend/
+│   ├── __init__.py
 │   ├── agent.py
 │   ├── crew.py
 │   ├── engine.py
@@ -32,15 +33,27 @@ AI-Copilot-Assistant/
 │   └── main.py
 │
 ├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── firebase.js
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
 │   ├── package.json
-│   └── package-lock.json
-│
-├── data/
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
 │
 ├── Docs/
+│   └── crewAIDocs.txt
 │
-├── README.md
+├── .env.example
+├── .gitignore
 ├── GUIDE.md
+├── README.md
+├── agent-demo.png
+├── package-lock.json
 ├── requirements.txt
 ├── setup.sh
 └── visualize_db.py
@@ -70,10 +83,13 @@ AI-Copilot-Assistant/
 - Chroma Vector Database
 
 ### Frontend
+- React.js
 - JavaScript
 - HTML
 - CSS
+- Vite
 - Node.js
+- Firebase
 
 ---
 
