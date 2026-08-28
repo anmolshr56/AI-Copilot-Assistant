@@ -1,0 +1,15 @@
+langchain
+langchain-community
+langchain-classic
+pypdf
+langchain-ollama
+langchain-chroma
+langchain-openai
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+ddgs
+crewai
+scikit-learn
+matplotlib
