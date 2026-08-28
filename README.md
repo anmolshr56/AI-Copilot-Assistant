@@ -21,49 +21,48 @@ An AI-powered personal copilot designed to bring conversational AI, intelligent 
 
 ## 🏗️ Project Architecture
 
-```text
-AI-Copilot-Assistant/
-│
-├── backend/
-│   ├── __init__.py
-│   ├── agent.py
-│   ├── crew.py
-│   ├── engine.py
-│   ├── llm_config.py
-│   └── main.py
-│
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── firebase.js
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── postcss.config.js
-│   ├── tailwind.config.js
-│   └── vite.config.js
-│
-├── Docs/
-│   └── crewAIDocs.txt
-│
-├── .env.example
-├── .gitignore
-├── GUIDE.md
-├── README.md
-├── agent-demo.png
-├── package-lock.json
-├── requirements.txt
-├── setup.sh
-└── visualize_db.py
-```
+    AI-Copilot-Assistant/
+    │
+    ├── backend/
+    │   ├── __init__.py
+    │   ├── agent.py
+    │   ├── crew.py
+    │   ├── engine.py
+    │   ├── llm_config.py
+    │   └── main.py
+    │
+    ├── frontend/
+    │   ├── src/
+    │   │   ├── App.jsx
+    │   │   ├── firebase.js
+    │   │   ├── index.css
+    │   │   └── main.jsx
+    │   ├── index.html
+    │   ├── package.json
+    │   ├── package-lock.json
+    │   ├── postcss.config.js
+    │   ├── tailwind.config.js
+    │   └── vite.config.js
+    │
+    ├── Docs/
+    │   └── crewAIDocs.txt
+    │
+    ├── .env.example
+    ├── .gitignore
+    ├── GUIDE.md
+    ├── README.md
+    ├── agent-demo.png
+    ├── package-lock.json
+    ├── requirements.txt
+    ├── setup.sh
+    └── visualize_db.py
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Backend
+
 - Python
 - FastAPI
 - LangChain
@@ -71,18 +70,21 @@ AI-Copilot-Assistant/
 - CrewAI
 
 ### AI / LLM
+
 - Ollama
 - Gemma
 - OpenRouter
 - LangChain Agents
 
 ### Tools & Retrieval
+
 - DuckDuckGo Search
-- PDF processing
+- PDF Processing
 - Retrieval-Augmented Generation (RAG)
 - Chroma Vector Database
 
 ### Frontend
+
 - React.js
 - JavaScript
 - HTML
@@ -99,19 +101,17 @@ AI-Copilot-Assistant/
 
 The application can process uploaded PDF documents and retrieve relevant information to answer questions based on their content.
 
-```text
-Upload PDF
-     ↓
-Process Document
-     ↓
-Create Embeddings
-     ↓
-Store in Vector Database
-     ↓
-Retrieve Relevant Content
-     ↓
-Generate AI Response
-```
+    Upload PDF
+         ↓
+    Process Document
+         ↓
+    Create Embeddings
+         ↓
+    Store in Vector Database
+         ↓
+    Retrieve Relevant Content
+         ↓
+    Generate AI Response
 
 ---
 
@@ -119,17 +119,15 @@ Generate AI Response
 
 The Autonomous Agent can select and use available tools based on the user's query.
 
-```text
-User Query
-    ↓
-AI Agent
-    ↓
-Select Appropriate Tool
-    ├── Web Search
-    └── Current Time
-    ↓
-Generate Response
-```
+    User Query
+        ↓
+    AI Agent
+        ↓
+    Select Appropriate Tool
+        ├── Web Search
+        └── Current Time
+        ↓
+    Generate Response
 
 ---
 
@@ -147,29 +145,25 @@ The application supports both local and cloud-based language models.
 
 Ollama can be used to run supported models locally.
 
-```text
-Application
-     ↓
-LangChain
-     ↓
-Ollama
-     ↓
-Local Gemma Model
-```
+    Application
+         ↓
+    LangChain
+         ↓
+    Ollama
+         ↓
+    Local Gemma Model
 
 ### Cloud LLM
 
 OpenRouter provides access to cloud-based models through an OpenAI-compatible API.
 
-```text
-Application
-     ↓
-LangChain / OpenAI-compatible API
-     ↓
-OpenRouter
-     ↓
-Selected LLM
-```
+    Application
+         ↓
+    LangChain / OpenAI-compatible API
+         ↓
+    OpenRouter
+         ↓
+    Selected LLM
 
 ---
 
@@ -177,33 +171,25 @@ Selected LLM
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/anmolshr56/AI-Copilot-Assistant.git
-cd AI-Copilot-Assistant
-```
+    git clone https://github.com/anmolshr56/AI-Copilot-Assistant.git
+    cd AI-Copilot-Assistant
 
 ### 2. Create a Python Virtual Environment
 
 Windows:
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+    python -m venv venv
+    venv\Scripts\activate
 
 ### 3. Install Python Dependencies
 
-```bash
-pip install -r requirements.txt
-```
+    pip install -r requirements.txt
 
 ### 4. Install Frontend Dependencies
 
-```bash
-cd frontend
-npm install
-cd ..
-```
+    cd frontend
+    npm install
+    cd ..
 
 ---
 
@@ -213,9 +199,7 @@ Create a `.env` file in the project root.
 
 Example:
 
-```env
-OPENROUTER_API_KEY=your_openrouter_api_key
-```
+    OPENROUTER_API_KEY=your_openrouter_api_key
 
 > Never upload your real API key or other secrets to GitHub.
 
@@ -229,9 +213,7 @@ For local LLM support, install Ollama and download the required model.
 
 Example:
 
-```bash
-ollama pull gemma2:2b
-```
+    ollama pull gemma2:2b
 
 Make sure Ollama is running before using local model functionality.
 
@@ -243,18 +225,14 @@ Make sure Ollama is running before using local model functionality.
 
 From the project root:
 
-```bash
-python -m backend.main
-```
+    python -m backend.main
 
 ### Start the Frontend
 
 Open another terminal:
 
-```bash
-cd frontend
-npm run dev
-```
+    cd frontend
+    npm run dev
 
 Open the local URL shown by the frontend development server.
 
@@ -262,33 +240,31 @@ Open the local URL shown by the frontend development server.
 
 ## 🔄 How It Works
 
-```text
-                 ┌───────────────────┐
-                 │       User        │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │   AI Copilot UI   │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │    Backend API    │
-                 └─────────┬─────────┘
-                           │
-             ┌─────────────┼─────────────┐
-             │             │             │
-             ▼             ▼             ▼
-        ┌─────────┐   ┌──────────┐   ┌──────────┐
-        │ Ollama  │   │OpenRouter│   │  Agents  │
-        └─────────┘   └──────────┘   └────┬─────┘
-                                          │
-                               ┌──────────┴──────────┐
-                               │                     │
-                               ▼                     ▼
-                          Web Search            PDF / RAG
-```
+                    ┌───────────────────┐
+                    │       User        │
+                    └─────────┬─────────┘
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │   AI Copilot UI   │
+                    └─────────┬─────────┘
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │    Backend API    │
+                    └─────────┬─────────┘
+                              │
+                ┌─────────────┼─────────────┐
+                │             │             │
+                ▼             ▼             ▼
+           ┌─────────┐   ┌──────────┐   ┌──────────┐
+           │ Ollama  │   │OpenRouter│   │  Agents  │
+           └─────────┘   └──────────┘   └────┬─────┘
+                                             │
+                                 ┌───────────┴───────────┐
+                                 │                       │
+                                 ▼                       ▼
+                            Web Search              PDF / RAG
 
 ---
 
@@ -330,6 +306,8 @@ This project demonstrates practical implementation of:
 B.Tech CSE Student
 
 GitHub: https://github.com/anmolshr56
+
+---
 
 ## 📸 Project Demo
 
